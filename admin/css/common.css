@@ -1,0 +1,81 @@
+:root {
+  --primary: #2ec1ac;
+  --secondary: #270e8c;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.h-font {
+  font-family: "Merienda", cursive;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.navbar-pos {
+  z-index: 300;
+}
+
+.custom-bg {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.custom-bg:hover {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.h-line {
+  width: 150px;
+  margin: 0 auto;
+  height: 1.7px;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  z-index: 300;
+}
+
+#dashboard-menu {
+  position: fixed;
+  height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  #dashboard-menu {
+    position: fixed;
+    height: auto;
+    width: 100%;
+  }
+  #main-content {
+    margin-top: 60px;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(36, 36, 36);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #444242;
+}
