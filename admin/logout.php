@@ -2,5 +2,5 @@
 
 require('include/essentials.php');
 session_start();
-session_destroy();
+unset($_SESSION['adminLogin']);
 redirect('index.php');

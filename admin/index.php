@@ -37,10 +37,10 @@ if (isset($_SESSION['adminLogin']) && $_SESSION['adminLogin'] == true) {
             </h4>
             <div class="p-4">
                 <div class="mb-3">
-                    <input name="admin_name" required type="text" class="form-control shadow-none text-center" placeholder="Admin Name" />
+                    <input name="admin_name" type="text" class="form-control shadow-none text-center" placeholder="Admin Name" required />
                 </div>
                 <div class="mb-4">
-                    <input name="admin_pass" required type="passsword" class="form-control shadow-none text-center" placeholder="Password" />
+                    <input name="admin_pass" type="password" class="form-control shadow-none text-center" placeholder="Password" required />
                 </div>
                 <button name="login" type="submit" class="btn text-white custom-bg shadow-none">Login</button>
             </div>
