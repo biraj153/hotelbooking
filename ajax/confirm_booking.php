@@ -13,7 +13,7 @@ if (isset($_POST['book_room'])) {
     $today = new DateTime();
 
 
-    if ($fromDate < $today || $fromDate >= $toDate) {
+    if ($fromDate < $today || $fromDate > $toDate) {
         echo 'date_missmatch';
         exit;
     }
