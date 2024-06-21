@@ -72,6 +72,7 @@ function edit_details(id) {
 
   xhr.onload = function () {
     let data = JSON.parse(this.responseText);
+    console.log(data);
     edit_room_form.elements["name"].value = data.roomdata.name;
     edit_room_form.elements["area"].value = data.roomdata.area;
     edit_room_form.elements["price"].value = data.roomdata.price;
@@ -141,7 +142,7 @@ function submit_edit_room() {
       edit_room_form.reset();
       get_all_rooms();
     } else {
-      alert("error", "Error Editing Room Data");
+      alert("error", "Failed to Edit Room Data");
     }
   };
 
@@ -158,7 +159,7 @@ function toggle_status(id, val) {
       alert("success", "Status Toggled!");
       get_all_rooms();
     } else {
-      alert("error", "Status Not Toggled!");
+      alert("error", "Status Could not be Toggled!");
     }
   };
 
@@ -233,7 +234,7 @@ function rem_image(img_id, room_id) {
         document.querySelector("#room-images .modal-title").innerText
       );
     } else {
-      alert("error", "Failed to Remove Image Added");
+      alert("error", "Failed to Remove Image");
     }
   };
 

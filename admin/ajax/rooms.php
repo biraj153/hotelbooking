@@ -13,7 +13,7 @@ if (isset($_POST['add_room'])) {
 
     $q1 = "INSERT INTO `rooms`(`name`, `area`, `price`,  `adult`, `children`, `description`) VALUES (?,?,?,?,?,?)";
     $values = [$frm_data['name'], $frm_data['area'], $frm_data['price'],  $frm_data['adult'], $frm_data['children'], $frm_data['desc']];
-    if (insert($q1, $values, 'siiiiis')) {
+    if (insert($q1, $values, 'siiiis')) {
         $flag = 1;
     }
 
@@ -97,9 +97,6 @@ if (isset($_POST['get_all_rooms'])) {
     echo $data;
 }
 
-
-
-
 if (isset($_POST['toggle_status'])) {
     $frm_data = filteration($_POST);
 
@@ -111,7 +108,6 @@ if (isset($_POST['toggle_status'])) {
         echo 0;
     }
 }
-
 
 if (isset($_POST['get_room'])) {
     $frm_data = filteration($_POST);
@@ -138,7 +134,6 @@ if (isset($_POST['get_room'])) {
     $data = json_encode($data);
     echo $data;
 }
-
 
 if (isset($_POST['edit_room'])) {
     $features = filteration(json_decode($_POST['features']));
@@ -196,7 +191,6 @@ if (isset($_POST['edit_room'])) {
     }
 }
 
-
 if (isset($_POST['add_image'])) {
     $frm_data = filteration($_POST);
 
@@ -215,7 +209,6 @@ if (isset($_POST['add_image'])) {
         echo $res;
     }
 }
-
 
 if (isset($_POST['get_room_images'])) {
     $frm_data = filteration($_POST);
@@ -242,7 +235,6 @@ if (isset($_POST['get_room_images'])) {
     }
 }
 
-
 if (isset($_POST['rem_image'])) {
     $frm_data = filteration($_POST);
 
@@ -260,6 +252,7 @@ if (isset($_POST['rem_image'])) {
         echo 0;
     }
 }
+
 if (isset($_POST['thumb_image'])) {
     $frm_data = filteration($_POST);
 
@@ -272,6 +265,7 @@ if (isset($_POST['thumb_image'])) {
     $res = update($q, $v, 'iii');
     echo $res;
 }
+
 if (isset($_POST['remove_room'])) {
     $frm_data = filteration($_POST);
 

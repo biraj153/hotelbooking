@@ -20,7 +20,7 @@ function toggle_status(id, val) {
       alert("success", "Status Toggled!");
       get_users();
     } else {
-      alert("success", "Status Toggled!");
+      alert("error", "Status Could not be Toggled!");
       get_users();
     }
   };
@@ -41,7 +41,7 @@ function remove_user(user_id) {
         alert("success", "User Removed");
         get_users();
       } else {
-        alert("success", "User Removed");
+        alert("error", "User Could not be Removed");
       }
     };
 

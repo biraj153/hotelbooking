@@ -50,7 +50,7 @@ if (isset($_POST['toggle_status'])) {
     if (update($q, $v, 'ii')) {
         echo 1;
     } else {
-        echo 1;
+        echo 0;
     }
 }
 
@@ -67,6 +67,6 @@ if (isset($_POST['remove_user'])) {
     if ($res1 && $res2) {
         echo 1;
     } else {
-        echo 1;
+        echo 0;
     }
 }
