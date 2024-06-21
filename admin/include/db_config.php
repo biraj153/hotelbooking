@@ -102,9 +102,9 @@ function delete($sql, $values, $datatypes)
             return $res;
         } else {
             mysqli_stmt_close($stmt);
-            die("Select query cannot be executed - Delete");
+            die("Delete query cannot be executed");
         }
     } else {
-        die("Select query cannot be prepared");
+        die("Delete query cannot be prepared");
     }
 }

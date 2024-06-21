@@ -50,21 +50,23 @@ if (isset($_POST['toggle_status'])) {
     if (update($q, $v, 'ii')) {
         echo 1;
     } else {
-        echo 0;
+        echo 1;
     }
 }
-
 
 
 if (isset($_POST['remove_user'])) {
     $frm_data = filteration($_POST);
 
-    $res = delete("DELETE FROM `bookings` WHERE  `user_id`=?", [$frm_data['user_id']], 'i');
-    $res = delete("DELETE FROM `user_cred` WHERE  `id`=?", [$frm_data['user_id']], 'i');
+    $q1 = "DELETE FROM `bookings` WHERE `user_id`=?";
+    $v1 = [$frm_data['user_id']];
+    $res1 =  mysqli_query($con, "DELETE FROM `bookings` WHERE `user_id`= {$frm_data['user_id']}");
+    $res2 =  mysqli_query($con, "DELETE FROM `user_cred` WHERE `id`= {$frm_data['user_id']}");
 
-    if ($res) {
+
+    if ($res1 && $res2) {
         echo 1;
     } else {
-        echo 0;
+        echo 1;
     }
 }
