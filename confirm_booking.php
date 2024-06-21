@@ -133,7 +133,7 @@
           alert("error", "Error: Booking Date is invalid.");
 
         } else {
-          alert("error", "Error: Booking Date is invalid.");
+          alert("error", this.responseText);
         }
       };
 

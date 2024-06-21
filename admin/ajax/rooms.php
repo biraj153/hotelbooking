@@ -144,7 +144,7 @@ if (isset($_POST['edit_room'])) {
     $q1 = "UPDATE `rooms` SET `name`=?,`area`=?,`price`=?,`adult`=?,`children`=?,`description`=? WHERE `id`=?";
     $values = [$frm_data['name'], $frm_data['area'], $frm_data['price'], $frm_data['adult'], $frm_data['children'], $frm_data['desc'], $frm_data['room_id']];
 
-    if (update($q1, $values, 'siiiiisi')) {
+    if (update($q1, $values, 'siiiisi')) {
         $flag = 1;
     }
     $del_features = delete("DELETE FROM `room_features` WHERE `room_id`=?", [$frm_data['room_id']], 'i');
