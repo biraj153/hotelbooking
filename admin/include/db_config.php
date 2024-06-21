@@ -5,10 +5,6 @@
     <link rel="icon" type="image/x-icon" href="images\favicon\favicon.ico">
 </head>
 
-<body>
-
-</body>
-
 </html>
 
 <?php
